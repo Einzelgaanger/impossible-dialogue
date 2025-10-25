@@ -94,13 +94,15 @@ const Services = () => {
                   </ul>
 
                   {/* CTA */}
-                  <Button 
-                    variant="ghost" 
-                    className="group/btn p-0 h-auto font-semibold text-primary hover:text-secondary hover:bg-transparent"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
+                  <a href={index === 0 ? "/services/ai-database" : index === 1 ? "/services/software-development" : "/services/data-analysis"}>
+                    <Button 
+                      variant="ghost" 
+                      className="group/btn p-0 h-auto font-semibold text-primary hover:text-secondary hover:bg-transparent"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
                 </div>
               </Card>
             );
