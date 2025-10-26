@@ -1,12 +1,56 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import contactHero from "@/assets/contact-hero.jpg";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from("contact_submissions")
+        .insert([formData]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -46,12 +90,15 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Contact Form */}
               <Card className="p-8 bg-card/50 backdrop-blur-sm border-border">
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Name</label>
                     <Input 
-                      placeholder="Your full name" 
+                      placeholder="Your full name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="bg-background/50 border-border focus:border-primary"
+                      required
                     />
                   </div>
                   
@@ -59,15 +106,20 @@ const Contact = () => {
                     <label className="text-sm font-medium text-foreground">Email</label>
                     <Input 
                       type="email" 
-                      placeholder="your.email@company.com" 
+                      placeholder="your.email@company.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="bg-background/50 border-border focus:border-primary"
+                      required
                     />
                   </div>
                   
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Company</label>
                     <Input 
-                      placeholder="Your company name" 
+                      placeholder="Your company name (optional)"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="bg-background/50 border-border focus:border-primary"
                     />
                   </div>
@@ -77,15 +129,19 @@ const Contact = () => {
                     <Textarea 
                       placeholder="Tell us about your project..." 
                       rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="bg-background/50 border-border focus:border-primary resize-none"
+                      required
                     />
                   </div>
                   
                   <Button 
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg group"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
