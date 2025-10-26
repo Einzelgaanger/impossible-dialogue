@@ -76,7 +76,7 @@ const Contact = () => {
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-semibold text-foreground">Email Us</h3>
-                    <p className="text-muted-foreground">contact@magicbuilders.com</p>
+                    <p className="text-muted-foreground">binfred.ke@gmail.com</p>
                     <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -89,8 +89,8 @@ const Contact = () => {
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-semibold text-foreground">Call Us</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground">Mon-Fri 9am-6pm EST</p>
+                    <p className="text-muted-foreground">+254 700 861129</p>
+                    <p className="text-sm text-muted-foreground">Mon-Fri 9am-6pm EAT</p>
                   </div>
                 </div>
               </Card>
@@ -102,8 +102,8 @@ const Contact = () => {
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-semibold text-foreground">Visit Us</h3>
-                    <p className="text-muted-foreground">123 Innovation Street</p>
-                    <p className="text-sm text-muted-foreground">San Francisco, CA 94105</p>
+                    <p className="text-muted-foreground">Nairobi, Kenya</p>
+                    <p className="text-sm text-muted-foreground">Schedule an appointment</p>
                   </div>
                 </div>
               </Card>

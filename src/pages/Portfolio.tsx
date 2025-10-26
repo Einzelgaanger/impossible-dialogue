@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
+import portfolioBg from "@/assets/portfolio-bg.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -61,8 +62,15 @@ const Portfolio = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background"></div>
+      <section 
+        className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20"
+        style={{
+          backgroundImage: `url(${portfolioBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -120,11 +128,6 @@ const Portfolio = () => {
                     ))}
                   </div>
                 </div>
-
-                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:text-secondary hover:bg-transparent mt-6 self-start">
-                  View Case Study
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
               </Card>
             ))}
           </div>

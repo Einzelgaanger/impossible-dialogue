@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Globe, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import aboutBg from "@/assets/about-bg.jpg";
 
 const About = () => {
   const values = [
@@ -61,8 +62,15 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background"></div>
+      <section 
+        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20"
+        style={{
+          backgroundImage: `url(${aboutBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">

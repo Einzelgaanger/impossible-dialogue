@@ -10,6 +10,8 @@ import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import DataAnalysis from "./pages/services/DataAnalysis";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/services/data-analysis" element={<DataAnalysis />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
