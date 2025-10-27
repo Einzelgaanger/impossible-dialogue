@@ -16,7 +16,7 @@ After creating your user account, you need to manually add the admin role to you
 
 **Option A: Using the Backend Dashboard**
 
-1. Click the "View Backend" button in Lovable
+1. Access the Supabase dashboard
 2. Navigate to Table Editor
 3. Open the `user_roles` table
 4. Click "Insert row"

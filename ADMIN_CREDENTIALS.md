@@ -2,7 +2,7 @@
 
 ## Step 1: Open Your Backend Dashboard
 
-Click "View Backend" in Lovable to access your database.
+Access the Supabase dashboard to manage your database.
 
 ## Step 2: Run This SQL (One Time Only)
 
