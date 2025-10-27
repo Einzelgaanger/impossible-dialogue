@@ -1,0 +1,12 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main icon -->
+  <rect x="10" y="10" width="40" height="40" rx="8" fill="#1e40af"/>
+  <path d="M20 25h20v3H20v-3zm0 6h20v3H20v-3zm0 6h15v3H20v-3z" fill="white"/>
+  <circle cx="45" y="20" r="4" fill="#fbbf24"/>
+  <path d="M42 17h6v6h-6V17z" fill="white"/>
+  
+  <!-- Company name -->
+  <text x="65" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e40af">Magic Builders</text>
+  <text x="65" y="40" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Consultancy</text>
+  <text x="65" y="52" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af">The Impossible Is What We Do</text>
+</svg>
