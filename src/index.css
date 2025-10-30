@@ -8,46 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Black background */
-    --background: 0 0% 0%;
-    /* Beige #EDE8D0 for text */
-    --foreground: 40 42% 87%;
+    /* Beige #EDE8D0 as main background */
+    --background: 40 42% 87%;
+    /* Black for text */
+    --foreground: 0 0% 0%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 40 42% 87%;
+    --card: 40 35% 82%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 40 42% 87%;
+    --popover: 40 35% 82%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Beige as primary color */
-    --primary: 40 42% 87%;
-    --primary-foreground: 0 0% 0%;
+    /* Black as primary color */
+    --primary: 0 0% 0%;
+    --primary-foreground: 40 42% 87%;
 
     /* White as secondary */
     --secondary: 0 0% 100%;
     --secondary-foreground: 0 0% 0%;
 
     /* Darker beige for muted */
-    --muted: 0 0% 10%;
-    --muted-foreground: 40 30% 70%;
+    --muted: 40 30% 70%;
+    --muted-foreground: 0 0% 20%;
 
     /* White for accent */
     --accent: 0 0% 100%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 42% 87%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 42% 87% / 0.2;
-    --input: 40 42% 87% / 0.2;
-    --ring: 40 42% 87%;
+    --border: 0 0% 0% / 0.2;
+    --input: 0 0% 0% / 0.2;
+    --ring: 0 0% 0%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens - pure colors only */
-    --shadow-glow: 0 0 40px hsl(40 42% 87% / 0.3);
-    --shadow-glow-secondary: 0 0 40px hsl(0 0% 100% / 0.3);
-    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(0 0% 0% / 0.3);
+    --shadow-glow-secondary: 0 0 40px hsl(0 0% 0% / 0.2);
+    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.3);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
