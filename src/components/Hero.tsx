@@ -5,18 +5,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Background Image - No Overlay */}
-      <div 
-        className="absolute inset-0 z-0 opacity-30"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-8 animate-in fade-in slide-in-from-left-4 duration-1000">
           {/* Badge */}
@@ -87,11 +77,12 @@ const Hero = () => {
 
         {/* Image Content */}
         <div className="hidden md:block animate-in fade-in slide-in-from-right-4 duration-1000">
-          <img 
-            src={heroBg} 
-            alt="Magic Builders workspace" 
-            className="rounded-lg shadow-elegant border border-primary/20 w-full h-auto"
-          />
+          <div className="aspect-square rounded-lg border-2 border-primary flex items-center justify-center">
+            <div className="text-center space-y-4">
+              <div className="text-6xl">✨</div>
+              <p className="text-primary font-medium">Innovation in Action</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
