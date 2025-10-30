@@ -27,12 +27,12 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/image.png"
-              alt="mBc logo"
-              className="h-8 w-auto object-contain"
+              src="/WhatsApp Image 2025-10-30 at 22.42.43.svg"
+              alt="Magic Builders Consultancy logo"
+              className="h-12 w-auto object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-none bg-gradient-primary bg-clip-text text-transparent">
+              <span className="font-bold text-lg leading-none text-primary">
                 Magic Builders
               </span>
               <span className="text-xs text-muted-foreground">Consultancy</span>

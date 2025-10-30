@@ -8,45 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 210 40% 98%;
+    /* RAL 8019 Grey brown for dark backgrounds */
+    --background: 8 7% 22%;
+    /* #EDE8D0 Cream for text */
+    --foreground: 40 42% 87%;
 
-    --card: 240 8% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 8 7% 18%;
+    --card-foreground: 40 42% 87%;
 
-    --popover: 240 8% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 8 7% 18%;
+    --popover-foreground: 40 42% 87%;
 
-    --primary: 264 83% 64%;
-    --primary-foreground: 210 40% 98%;
+    /* Cream as primary color */
+    --primary: 40 42% 87%;
+    --primary-foreground: 8 7% 22%;
 
-    --secondary: 217 91% 60%;
-    --secondary-foreground: 240 10% 3.9%;
+    /* Black as secondary */
+    --secondary: 0 0% 0%;
+    --secondary-foreground: 40 42% 87%;
 
-    --muted: 240 6% 15%;
-    --muted-foreground: 240 5% 65%;
+    /* Slightly darker cream for muted */
+    --muted: 8 7% 28%;
+    --muted-foreground: 40 30% 70%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 240 10% 3.9%;
+    /* Lighter cream for accent */
+    --accent: 40 50% 92%;
+    --accent-foreground: 8 7% 22%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 42% 87%;
 
-    --border: 240 6% 18%;
-    --input: 240 6% 18%;
-    --ring: 264 83% 64%;
+    --border: 8 7% 30%;
+    --input: 8 7% 30%;
+    --ring: 40 42% 87%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(264 83% 64%) 0%, hsl(217 91% 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(264 83% 64%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 93% 58%) 0%, hsl(30 90% 55%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(240 10% 3.9%) 0%, hsl(240 8% 8%) 100%);
+    /* Custom design tokens - using only the 3 specified colors */
+    --gradient-primary: linear-gradient(135deg, hsl(40 42% 87%) 0%, hsl(40 50% 92%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(40 42% 87%) 0%, hsl(0 0% 0%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(40 42% 87%) 0%, hsl(40 30% 70%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(8 7% 22%) 0%, hsl(0 0% 0%) 100%);
     
-    --shadow-glow: 0 0 40px hsl(264 83% 64% / 0.3);
-    --shadow-glow-secondary: 0 0 40px hsl(217 91% 60% / 0.3);
-    --shadow-elegant: 0 20px 60px -10px hsl(240 10% 3.9% / 0.5);
+    --shadow-glow: 0 0 40px hsl(40 42% 87% / 0.3);
+    --shadow-glow-secondary: 0 0 40px hsl(40 50% 92% / 0.3);
+    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
