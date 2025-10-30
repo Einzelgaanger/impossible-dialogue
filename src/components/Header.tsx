@@ -25,10 +25,12 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow group-hover:shadow-glow-secondary transition-all duration-300">
-              <span className="text-background font-bold text-xl">M</span>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src="/image.png"
+              alt="mBc logo"
+              className="h-8 w-auto object-contain"
+            />
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-none bg-gradient-primary bg-clip-text text-transparent">
                 Magic Builders

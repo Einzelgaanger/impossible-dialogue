@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Rocket } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20">
-            <Sparkles className="w-4 h-4 text-accent" />
+            <Rocket className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium bg-gradient-primary bg-clip-text text-transparent">
               The Impossible Is What We Do
             </span>

@@ -60,4 +60,46 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Hide scrollbars for all elements */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* WebKit browsers (Chrome, Safari, Edge) */
+  }
+
+  /* Ensure body and html also hide scrollbars */
+  html, body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none; /* WebKit browsers */
+  }
+
+  /* Hide scrollbars for specific UI components */
+  .overflow-y-auto,
+  .overflow-auto,
+  .overflow-scroll,
+  [data-radix-scroll-area-viewport],
+  [cmdk-list],
+  [cmdk-group] {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* Internet Explorer 10+ */
+  }
+
+  .overflow-y-auto::-webkit-scrollbar,
+  .overflow-auto::-webkit-scrollbar,
+  .overflow-scroll::-webkit-scrollbar,
+  [data-radix-scroll-area-viewport]::-webkit-scrollbar,
+  [cmdk-list]::-webkit-scrollbar,
+  [cmdk-group]::-webkit-scrollbar {
+    display: none !important; /* WebKit browsers */
+  }
 }
