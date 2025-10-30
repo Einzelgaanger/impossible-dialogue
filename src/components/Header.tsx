@@ -71,7 +71,7 @@ const Header = () => {
               </div>
             ))}
             <Link to="/contact">
-              <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+              <Button className="bg-primary text-primary-foreground hover:shadow-glow transition-all duration-300">
                 Get Started
               </Button>
             </Link>
@@ -121,7 +121,7 @@ const Header = () => {
               </div>
             ))}
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full mt-4 bg-gradient-primary">Get Started</Button>
+              <Button className="w-full mt-4 bg-primary text-primary-foreground">Get Started</Button>
             </Link>
           </div>
         )}
