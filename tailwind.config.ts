@@ -48,6 +48,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-dark': 'var(--gradient-dark)',
+      },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
         'glow-secondary': 'var(--shadow-glow-secondary)',

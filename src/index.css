@@ -8,46 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Beige #EDE8D0 as main background */
-    --background: 40 42% 87%;
-    /* Black for text */
-    --foreground: 0 0% 0%;
+    --background: 240 10% 3.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 40 35% 82%;
-    --card-foreground: 0 0% 0%;
+    --card: 240 8% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 40 35% 82%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 240 8% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Black as primary color */
-    --primary: 0 0% 0%;
-    --primary-foreground: 40 42% 87%;
+    --primary: 264 83% 64%;
+    --primary-foreground: 210 40% 98%;
 
-    /* White as secondary */
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 240 10% 3.9%;
 
-    /* Darker beige for muted */
-    --muted: 40 30% 70%;
-    --muted-foreground: 0 0% 20%;
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    /* White for accent */
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 240 10% 3.9%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 0% / 0.2;
-    --input: 0 0% 0% / 0.2;
-    --ring: 0 0% 0%;
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 264 83% 64%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens - pure colors only */
-    --shadow-glow: 0 0 40px hsl(0 0% 0% / 0.3);
-    --shadow-glow-secondary: 0 0 40px hsl(0 0% 0% / 0.2);
-    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.3);
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(264 83% 64%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(264 83% 64%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 93% 58%) 0%, hsl(30 90% 55%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(240 10% 3.9%) 0%, hsl(240 8% 8%) 100%);
+    
+    --shadow-glow: 0 0 40px hsl(264 83% 64% / 0.3);
+    --shadow-glow-secondary: 0 0 40px hsl(217 91% 60% / 0.3);
+    --shadow-elegant: 0 20px 60px -10px hsl(240 10% 3.9% / 0.5);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }

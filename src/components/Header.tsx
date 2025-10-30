@@ -27,12 +27,12 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/WhatsApp Image 2025-10-30 at 22.42.43.svg"
-              alt="Magic Builders Consultancy logo"
-              className="h-12 w-auto object-contain"
+              src="/image.png"
+              alt="mBc logo"
+              className="h-8 w-auto object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-none text-primary">
+              <span className="font-bold text-lg leading-none bg-gradient-primary bg-clip-text text-transparent">
                 Magic Builders
               </span>
               <span className="text-xs text-muted-foreground">Consultancy</span>
@@ -71,7 +71,7 @@ const Header = () => {
               </div>
             ))}
             <Link to="/contact">
-              <Button className="bg-primary text-primary-foreground hover:shadow-glow transition-all duration-300">
+              <Button className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
                 Get Started
               </Button>
             </Link>
@@ -121,7 +121,7 @@ const Header = () => {
               </div>
             ))}
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full mt-4 bg-primary text-primary-foreground">Get Started</Button>
+              <Button className="w-full mt-4 bg-gradient-primary">Get Started</Button>
             </Link>
           </div>
         )}
